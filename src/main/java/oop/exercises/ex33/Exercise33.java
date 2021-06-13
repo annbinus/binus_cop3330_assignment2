@@ -20,25 +20,36 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Exercise33 {
 
-    private static ArrayList<String>  responses = new ArrayList<>();
+
     private static Scanner scan = new Scanner(System.in);
 
-    public static void arrayInitializer(){
+    public static ArrayList<String> arrayInitializer(){
+
+        ArrayList<String>  responses = new ArrayList<>();
         responses.add("Yes");
         responses.add("No");
         responses.add("Maybe");
         responses.add("Ask again later.");
+
+        return responses;
     }
 
     public static int randomNumGenerator(){
-        return (int) (Math.random() * 3) + 1;
+
+        return (int)(Math.random() * 3) + 1;
     }
 
+    public static String selectRandom(int num){
+
+        return arrayInitializer().get(num-1);
+
+    }
     public static void main(String[] args) {
         arrayInitializer();
+
         System.out.print("What's your question?\n> ");
         scan.nextLine();
 
-        System.out.println(responses.get(randomNumGenerator()));
+        System.out.println(selectRandom(randomNumGenerator()));
     }
 }
