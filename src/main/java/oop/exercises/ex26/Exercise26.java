@@ -43,7 +43,6 @@ public class Exercise26 {
 
         System.out.print("What is the APR on the card (as a percent)? ");
         APR = scan.nextFloat();
-        APR = APR/(100*365);
 
         System.out.print("What is the monthly payment you can make? ");
         monthyPay = scan.nextFloat();
