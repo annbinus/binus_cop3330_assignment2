@@ -21,5 +21,41 @@ Use a function called filterEvenNumbers to encapsulate the logic for this. The f
 Instead of prompting for numbers, read in lines from any text file and print out only the even-numbered lines.
  */
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
 public class Exercise38 {
+
+    private static final Scanner scan = new Scanner(System.in);
+
+    public static List<String> enterValues(){
+
+        System.out.print("Enter a list of numbers, separated by spaces: ");
+        String values = scan.nextLine();
+
+        String[] list = values.split(" ");
+
+        List<String> a1 = new ArrayList<>();
+        a1 = Arrays.asList(list);
+
+        return a1;
+    }
+
+    public static void printList(ArrayList<Integer> list){
+        System.out.print("The even numbers are " + list.toString());
+    }
+
+    public static void main(String[] args) {
+
+        FilterValues filter = new FilterValues();
+
+        ArrayList<Integer> newList = filter.convertList(enterValues());
+
+        newList = filter.evenNumbers(newList);
+
+        printList(newList);
+
+    }
 }

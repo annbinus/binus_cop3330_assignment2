@@ -47,6 +47,10 @@ public class Exercise34 {
         empList.add("Jeremy Goodwin");
     }
 
+    public static int index(String search){
+        return empList.indexOf(search);
+    }
+
     public static void readInput(){
         System.out.println("Enter an employee name to remove: ");
         name = scan.nextLine();
@@ -54,11 +58,17 @@ public class Exercise34 {
 
     public static void printList(){
 
+       System.out.print("There are only " + empList.size() + " employees:");
         for(String str : empList){
             System.out.println(str);
         }
 
     }
+    public static int listSize(){
+        return empList.size();
+    }
+
+
     public static void main(String[] args) {
 
         arrayInitializer();

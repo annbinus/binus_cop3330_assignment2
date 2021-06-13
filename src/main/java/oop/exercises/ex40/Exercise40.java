@@ -38,5 +38,28 @@ Read in the data from a file.
 
  */
 
+import java.util.Scanner;
+
 public class Exercise40 {
+
+    private static Scanner scan = new Scanner(System.in);
+
+    public static String search() {
+        System.out.print("Enter a search string: ");
+        String search = scan.nextLine();
+
+        if (search.equals(""))
+        {
+            System.out.println("No search string.");
+        }
+        return search;
+    }
+
+    public static void main(String[] args){
+
+        FilteringRecords list = new FilteringRecords();
+        list.recordbase();
+        list.containsSearch(search());
+        list.print();
+    }
 }

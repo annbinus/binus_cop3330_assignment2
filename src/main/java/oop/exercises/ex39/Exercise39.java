@@ -37,4 +37,9 @@ Use a database such as MySQL, or a key-value store such as Redis, to store the e
  */
 
 public class Exercise39 {
+    public static void main(String[] args) {
+        Records rec = new Records();
+        rec.recordbase();
+        rec.print();;
+    }
 }

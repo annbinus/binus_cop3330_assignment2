@@ -25,5 +25,34 @@ Have the program present a few options rather than a single result.
 Place the password on the user’s clipboard when generated.
  */
 
+import java.util.Scanner;
+
 public class Exercise37 {
+
+    private static Scanner scan = new Scanner(System.in);
+
+    private static int minLength;
+    private static int sc;
+    private static int numbers;
+
+    public static void passwordRequirements(){
+        Scanner input = new Scanner(System.in);
+
+        // get inputs from users
+        System.out.print("What's the minimum length? ");
+        minLength = input.nextInt();
+
+        System.out.print("How many special characters? ");
+        sc = input.nextInt();
+
+        System.out.print("How many numbers? ");
+        numbers = input.nextInt();
+    }
+
+    public static void main(String[] args) {
+       passwordRequirements();
+
+       passwordGenerator create = new passwordGenerator();
+       System.out.print(create.createPassword(minLength, sc, numbers));
+    }
 }
