@@ -57,8 +57,6 @@ public class Exercise32 {
 
         String choice = "y";
 
-
-
         while (choice.equals("y")) {
             readInput();
             GameLevels l = new GameLevels();

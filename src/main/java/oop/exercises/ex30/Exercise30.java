@@ -2,6 +2,7 @@ package oop.exercises.ex30;
 /*
  *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Ann Binus
+
 * Exercise 30 - Multiplication Table
 Create a program that generates a multiplication table for the numbers 1 through 12 (inclusive).
 Example Output
@@ -17,24 +18,37 @@ Example Output
    10   20   30   40   50   60   70   80   90  100  110  120
    11   22   33   44   55   66   77   88   99  110  121  132
    12   24   36   48   60   72   84   96  108  120  132  144
+
 * Constraint
 Use a nested loop to complete this program.
 Align each column within the table without using the tab character.
+
 * Challenges
 Create a graphical program. Use a drop-down list to change the base number. Generate or update the table when the number is selected.
  */
+
 public class Exercise30 {
 
-    public static void printTable(){
+
+    public static int doMath(int i, int j){
+        return i*j;
+    }
+
+    public static void printTable(int i){
+        for( int j=1; j<=12; j++){
+            System.out.printf("%5d", doMath(i, j));
+        }
+    }
+
+    public static void print(){
 
         for(int i=1; i <=12; i++){
-            for( int j=1; j<=12; j++){
-                System.out.printf("%5d", i*j);
-            }
+            printTable(i);
             System.out.print("\n");
         }
     }
+
     public static void main(String[] args) {
-        printTable();
+        print();
     }
 }
