@@ -54,25 +54,11 @@ public class FilteringRecords {
             record.add(emp6);
         }
 
-    public String[] sort(){
 
-        String newList = "";
-
-        for(int i=0; i<record.size(); i++){
-
-            Map tool = record.get(i);
-            newList += tool.get("Lastname")+" ";
-
-        }
-
-        String[] order= newList.split(" ");
-        Arrays.sort(order);
-
-        return order;
-    }
 
     public void containsSearch(String search){
         Map<String , String> map;
+
 
         for(int i=0; i<record.size(); i++){
 
@@ -92,8 +78,8 @@ public class FilteringRecords {
 
         String output = "Name                | Position          | Separation Date\n--------------------|-------------------|----------------\n";
 
-        String[] sortLNames = sort();
-        for(int i=0; i<sortLNames.length; i++){
+
+        for(int i=0; i<record.size(); i++){
 
             Map<String , String> map = record.get(i);
 

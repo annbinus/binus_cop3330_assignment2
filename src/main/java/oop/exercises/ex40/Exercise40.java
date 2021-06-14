@@ -48,13 +48,8 @@ public class Exercise40 {
         System.out.print("Enter a search string: ");
         String search = scan.nextLine();
 
-        if (search.equals(""))
-        {
-            System.out.println("No search string.");
-        }
-        else
             return search;
-        return "";
+
     }
 
     public static void main(String[] args){
