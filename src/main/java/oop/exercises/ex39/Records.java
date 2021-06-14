@@ -9,7 +9,7 @@ public class Records {
 
     private ArrayList<Map> record = new ArrayList<Map>();
 
-    public void recordbase(){
+    public void recordBase(){
         Map<String, String> employee1 = new HashMap<>();
         employee1.put("Firstname","John");
         employee1.put("Lastname","Johnson");

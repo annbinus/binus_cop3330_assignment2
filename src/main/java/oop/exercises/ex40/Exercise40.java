@@ -52,7 +52,9 @@ public class Exercise40 {
         {
             System.out.println("No search string.");
         }
-        return search;
+        else
+            return search;
+        return "";
     }
 
     public static void main(String[] args){

@@ -53,7 +53,12 @@ public class Exercise35 {
         }
     }
     public static int randomNumGenerator(){
+
         return (int)(Math.random()*count);
+    }
+
+    public static String getName(int num){
+        return list.get(num);
     }
 
     public static void main(String[] args) {
@@ -64,7 +69,7 @@ public class Exercise35 {
             System.out.print("There's no winner!");
         }
         else{
-            System.out.print("The winner is... " + list.get(randomNumGenerator()));
+            System.out.print("The winner is... " + getName(randomNumGenerator()));
         }
     }
 }

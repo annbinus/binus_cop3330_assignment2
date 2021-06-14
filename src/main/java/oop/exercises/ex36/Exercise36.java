@@ -69,7 +69,7 @@ public class Exercise36 {
         System.out.println("\nThe average is " + stat.average(list));
         System.out.println("The minimum is " + stat.min(list));
         System.out.println("The maximum is " + stat.max(list));
-        System.out.printf("The standard deviation is %.2f", stat.std(list));
+        System.out.printf("The standard deviation is " + stat.std(list));
     }
 
     public static void main(String[] args) {

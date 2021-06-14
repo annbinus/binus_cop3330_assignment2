@@ -65,6 +65,7 @@ public class Exercise34 {
 
     }
     public static int listSize(){
+
         return empList.size();
     }
 

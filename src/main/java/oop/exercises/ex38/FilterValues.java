@@ -9,14 +9,16 @@ public class FilterValues {
 
         ArrayList<Integer> newList = new ArrayList<Integer>();
 
-        for (String s : list) {
-            newList.add(Integer.valueOf(s));
+        for (String str : list) {
+            newList.add(Integer.valueOf(str));
         }
         return newList;
     }
 
     public ArrayList<Integer> evenNumbers(ArrayList<Integer> list){
+
         for(int i=0; i<list.size(); i++){
+
             if((list.get(i) % 2) != 0){
                 list.remove(i);
                 i--;

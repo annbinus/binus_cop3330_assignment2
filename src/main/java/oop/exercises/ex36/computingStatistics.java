@@ -47,6 +47,6 @@ public class computingStatistics {
             sum += Math.pow((Double.parseDouble(str)-average(list)),2);
         }
 
-        return (double)(Math.sqrt((sum/list.size()-1)));
+        return (double)Math.round((Math.sqrt((sum/list.size()-1)))*100)/100;
     }
 }
